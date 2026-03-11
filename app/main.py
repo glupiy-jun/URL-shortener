@@ -2,8 +2,8 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from .Database import engine, Base, get_db
-from .Crud import create_url, get_url, add_click
+from .database import engine, Base, get_db
+from .crud import create_url, get_url, add_click
 
 Base.metadata.create_all(bind=engine)
 
